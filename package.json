@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/piyushsi/piyushsi.github.io/issues"
   },
-  "homepage": "https://github.com/piyushsi/piyushsi.github.io#readme"
+  "homepage": "https://github.com/piyushsi/piyushsi.github.io#readme",
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "lite-server": "^2.5.4"
+  }
 }
