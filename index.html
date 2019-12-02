@@ -298,35 +298,30 @@
       if (e.results[0].isFinal) {
         p = document.createElement('p');
         words.appendChild(p);
-        piyush()
       }
   });
   function piyush(){
-	  function project(){
   	if (p.innerText="project"){
   		window.location.replace("https://piyushsi.github.io/#projects");		
-}}
-	  function contact(){
-	if (p.innerText="contact"){
+}
+	else if (p.innerText="contact"){
   		window.location.replace("https://piyushsi.github.io/#contact");
-}}
-	  function about(){
-	if (p.innerText="about"){
+}
+	else if (p.innerText="about"){
   		window.location.replace("https://piyushsi.github.io/#aboutus");
-}}
-	  function home(){
-	if (p.innerText="home"){
+}
+	else if (p.innerText="home"){
   		window.location.replace("https://piyushsi.github.io/#");
-}}
-  project();
-  contact();
-  about();
-  home();
-   recognition.start()}
+}
+ }
 
   recognition.addEventListener('end', recognition.start);
 
   recognition.start();
+	window.setInterval(function(){
+  	piyush();
+	words.textContent=""
+	}, 3000);
 
 </script>
 
