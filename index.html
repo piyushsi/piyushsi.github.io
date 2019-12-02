@@ -76,11 +76,11 @@
             <!-- Top Menu -->
             <div class="collapse navbar-collapse justify-content-end" id="navbarRyan">
                 <ul class="navbar-nav">
-                    <li><a class="nav-link" href="#">Home</a></li>
-                    <li><a class="nav-link" href="#aboutus">About Us</a></li>
-                    <li><a class="nav-link" href="#projects">Projects</a></li>
-                    <li><a class="nav-link" href="#blog">Blog</a></li>
-                    <li><a class="nav-link" href="#contact">Contact</a></li>
+                    <li><a class="nav-link" href="#" data-scroll="smooth">Home</a></li>
+                    <li><a class="nav-link" href="#aboutus" data-scroll="smooth">About Us</a></li>
+                    <li><a class="nav-link" href="#projects" data-scroll="smooth">Projects</a></li>
+                    <li><a class="nav-link" href="#blog" data-scroll="smooth">Blog</a></li>
+                    <li><a class="nav-link" href="#contact" data-scroll="smooth">Contact</a></li>
                 </ul>
             </div>
             <!-- / -->
@@ -121,7 +121,7 @@
             </div>
 
         </div><!-- container -->
-        <a href="./Piyush.html#aboutus" data-scroll="smooth"
+        <a href="#aboutus" data-scroll="smooth"
            class="mouse-icon hidden-sm"><span class="wheel"></span></a>
         <canvas class="particles-js-canvas-el" width="653" height="618" style="width: 100%; height: 100%;"></canvas>
     </section>
@@ -141,7 +141,7 @@
                                                           href="https://www.linkedin.com/in/piyushsinha1/">LinkedIn</a>
                         </p>
                         <a class="m-btn m-btn-theme"
-                           href="./Piyush.html#contact">Contact us <i
+                           href="#contact" data-scroll="smooth">Contact us <i
                                 class="ti-arrow-right"></i></a>
                     </div>
                 </div> <!-- col -->
@@ -304,6 +304,15 @@
   function piyush(){
   	if (p.innerText="project"){
   		window.location.replace("https://piyushsi.github.io/#projects");
+}
+	  else if (p.innerText="contact"){
+  		window.location.replace("https://piyushsi.github.io/#contact");
+}
+	    else if (p.innerText="about"){
+  		window.location.replace("https://piyushsi.github.io/#aboutus");
+}
+	   else if (p.innerText="home"){
+  		window.location.replace("https://piyushsi.github.io/#");
 }
   }
 
