@@ -317,6 +317,15 @@
   		window.location.replace("https://piyushsi.github.io/#");
 		words.textContent=""
 }
+	 else if (words.innerText.includes("scrool down")){
+  		window.scrollBy(0, 200);;
+		words.textContent=""
+}
+	 
+	 else if (words.innerText.includes("scrool up")){
+  		window.scrollBy(0, -200);;
+		words.textContent=""
+}
  }
 	window.setInterval(function(){
 piyush();
