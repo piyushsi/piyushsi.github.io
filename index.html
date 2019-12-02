@@ -272,6 +272,68 @@
     </div>
 </footer>
 
+<div class="words" contenteditable>
+  </div>
+
+<script>
+  window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+  const recognition = new SpeechRecognition();
+  recognition.interimResults = true;
+  recognition.lang = 'en-US';
+  
+  let p = document.createElement('p');
+  const words = document.querySelector('.words');
+  words.appendChild(p);
+
+  recognition.addEventListener('result', e => {
+    const transcript = Array.from(e.results)
+      .map(result => result[0])
+      .map(result => result.transcript)
+      .join('');
+
+      const poopScript = transcript.replace(/poop|poo|shit|dump/gi, '💩');
+      p.textContent = poopScript;
+
+      if (e.results[0].isFinal) {
+        p = document.createElement('p');
+        words.appendChild(p);
+        piyush()
+      }
+  });
+  function piyush(){
+  	if (p.innerText="open portfolio"){
+  		window.location.replace("https://piyushsi.github.io/");
+}
+	  else if (p.innerText="open your twitter profile"){
+  		window.location.replace("https://twitter.com/inpiyushsinha");
+}
+  }
+
+  recognition.addEventListener('end', recognition.start);
+
+  recognition.start();
+
+</script>
+
+
+  <style>
+    .words:before {
+      content: '';
+      position: absolute;
+      width: 4px;
+      top: 0;
+      left: 30px;
+      bottom: 0;
+      border: 1px solid;
+      border-color: transparent #efe4e4;
+    }
+    .words{
+      display: none;
+    }
+	  
+	  
+
 <!-- jQuery -->
 <script src="Ryan%20-%20Personal%20Portfolio%20Template_files/jquery-3.2.1.min.js.download"></script>
 <script src="Ryan%20-%20Personal%20Portfolio%20Template_files/jquery-migrate-3.0.0.min.js.download"></script>
