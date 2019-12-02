@@ -300,28 +300,32 @@
         words.appendChild(p);
       }
   });
-  function piyush(){
-  	if (p.textContent="project"){
-  		window.location.replace("https://piyushsi.github.io/#projects");		
+ function piyush(){
+  	if (words.innerText.includes("project")){
+  		window.location.replace("https://piyushsi.github.io/#projects");
+		words.textContent=""
 }
-	else if (p.textContent="contact"){
+	else if (words.innerText.includes("contact")){
   		window.location.replace("https://piyushsi.github.io/#contact");
+		words.textContent=""
 }
-	else if (p.textContent="about"){
+	else if (words.innerText.includes("about")){
   		window.location.replace("https://piyushsi.github.io/#aboutus");
+		words.textContent=""
 }
-	else if (p.textContent="home"){
+	else if (words.innerText.includes("home")){
   		window.location.replace("https://piyushsi.github.io/#");
+		words.textContent=""
 }
  }
+	window.setInterval(function(){
+piyush();
+}, 3000);
 
   recognition.addEventListener('end', recognition.start);
 
   recognition.start();
-	window.setInterval(function(){
-  	piyush();
-	words.textContent=""
-	}, 3000);
+
 </script>
 
 
