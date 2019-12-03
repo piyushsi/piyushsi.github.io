@@ -300,33 +300,62 @@
         words.appendChild(p);
       }
   });
- function piyush(){
+function piyush(){
+ 	var Hello = new Audio('../todo/assets/media/Hello.mp3');
+	var Contact = new Audio('../todo/assets/media/Contact.mp3');
+	var Project = new Audio('../todo/assets/media/Projects.mp3');
+	var Whoru = new Audio('../todo/assets/media/whoru.mp3');
+	var Ankit = new Audio('../todo/assets/media/Ankit.mp3');
+	var About = new Audio('../todo/assets/media/About.mp3');
+	var Home = new Audio('../todo/assets/media/Home.mp3');
+	var Imagehome = new Audio('../todo/assets/media/Imagehome.mp3');
+	
   	if (words.innerText.includes("project")){
   		window.location.replace("https://piyushsi.github.io/#projects");
+		Project.play();
 		words.textContent=""
 }
 	else if (words.innerText.includes("contact")){
   		window.location.replace("https://piyushsi.github.io/#contact");
+		Contact.play();
 		words.textContent=""
 }
 	else if (words.innerText.includes("about")){
   		window.location.replace("https://piyushsi.github.io/#aboutus");
+		Hello.play();
 		words.textContent=""
 }
 	else if (words.innerText.includes("home")){
   		window.location.replace("https://piyushsi.github.io/#");
+		Home.play();
 		words.textContent=""
 }
-	 else if (words.innerText.includes("scroll down")){
+	 else if (words.innerText.includes("down")){
   		window.scrollBy(0, 200);
 		words.textContent=""
 }
 	 
-	 else if (words.innerText.includes("scroll up")){
+	 else if (words.innerText.includes("up")){
   		window.scrollBy(0, -200);
 		words.textContent=""
 }
- }
+	 else if (words.innerText.includes("who are you")){
+  		Whoru.play();
+		words.textContent=""
+}
+ 	else if (words.innerText.includes("hello")){
+  		Hello.play();
+		words.textContent=""
+}
+	else if (words.innerText.includes("do you know Ankit")){
+  		Ankit.play();
+		words.textContent=""
+}
+	else if (words.innerText.includes("is there any funny thing")){
+  		Imagehome.play();
+		words.textContent=""
+}
+}
 	window.setInterval(function(){
 piyush();
 }, 2000);
