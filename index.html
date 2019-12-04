@@ -46,7 +46,132 @@
     <link rel="stylesheet" href="./style-switcher/style-switcher.css" type="text/css">
     <script type="text/javascript" src="./style-switcher/jquery.cookie.js"></script>
 </head>
+<!-- loader -->
+<div class="load_animation">
+        <img class="blink-image" src="../todo/assets/media/logo.JPG">
+        <br>
+        <div class="lds-facebook"><div></div><div></div><div></div></div>
+    </div>
+    <script>
+        window.setInterval(function(){
+        var loaDer= document.querySelector(".load_animation")
+         loaDer.style.display="none";
+}, 2000);
+        
+    </script>
+<style>
+    .load_animation{
+        z-index: 7;
+width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #242f3f;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+    }
+    .blink-image{
+        height:14rem;
+    }
+    @-moz-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+} 
 
+@-webkit-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+/* IE */
+@-ms-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+/* Opera and prob css3 final iteration */
+@keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+.blink-image {
+    -moz-animation: blink normal 2s infinite ease-in-out; /* Firefox */
+    -webkit-animation: blink normal 2s infinite ease-in-out; /* Webkit */
+    -ms-animation: blink normal 2s infinite ease-in-out; /* IE */
+    animation: blink normal 2s infinite ease-in-out; /* Opera and prob css3 final iteration */
+}
+    .lds-facebook {
+  position: absolute;
+  top: 70%;
+  left: 48%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #5EBFEF;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+</style>
+<!-- loader -->
+	
 <!-- Body Start -->
 <body data-spy="scroll" data-target="#navbarRyan" data-offset="98">
 
