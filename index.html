@@ -447,6 +447,7 @@ function piyush(){
 	var Ready = new Audio('../todo/assets/media/Ready.mp3');
 	var Destroy = new Audio('../todo/assets/media/Destroy.mp3');
 	var Hof = new Audio('../todo/assets/media/Hof.mp3');
+	var Change = new Audio('../todo/assets/media/Change.mp3');
 	
   	if (words.innerText.includes("project")){
   		window.location.replace("https://piyushsi.github.io/#projects");
@@ -512,11 +513,11 @@ function piyush(){
   		console.log (words.innerText.split(' ').slice(1,-1).join(' '))
 		words.textContent=""
 }
-	else if (words.innerText.includes("return")){ function x(){
-		return (words.innerText.split(' ').slice(1,-1).join(' '))
-	}
-  		x();
+	else if (words.innerText.includes("return")){
+		var change = document.querySelector('h5')
+		change.innerText=words.innerText.split(' ').slice(1,-1).join(' ')
 		words.textContent=""
+		Change.play()
 }
 	else if (words.innerText.includes("are you working under function")){
 		Hof.play()
