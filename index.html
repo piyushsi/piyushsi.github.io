@@ -447,6 +447,8 @@ function piyush(){
 	var Home = new Audio('../todo/assets/media/Home.mp3');
 	var Imagehome = new Audio('../todo/assets/media/Imagehome.mp3');
 	var Ready = new Audio('../todo/assets/media/Ready.mp3');
+	var Destroy = new Audio('../todo/assets/media/Destroy.mp3');
+	var Hof = new Audio('../todo/assets/media/Hof.mp3');
 	
   	if (words.innerText.includes("project")){
   		window.location.replace("https://piyushsi.github.io/#projects");
@@ -518,6 +520,13 @@ function piyush(){
 		var TextSearch=words.innerText.split('return').join().split('execute').join().split(',')[1]
   		return (TextSearch)
 		words.textContent=""
+}
+	else if (words.innerText.includes("are you working under function")){
+		Hof.play()
+		words.textContent=""
+}
+	else if (words.innerText.includes("function destroy")){
+		Destroy.play()
 }
 }
 	window.setInterval(function(){
