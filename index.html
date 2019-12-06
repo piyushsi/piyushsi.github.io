@@ -512,8 +512,10 @@ function piyush(){
   		console.log (words.innerText.split(' ').slice(1,-1).join(' '))
 		words.textContent=""
 }
-	else if (words.innerText.includes("return")){
-  		return (words.innerText.split(' ').slice(1,-1).join(' '))
+	else if (words.innerText.includes("return")){ function x(){
+		return (words.innerText.split(' ').slice(1,-1).join(' '))
+	}
+  		x();
 		words.textContent=""
 }
 	else if (words.innerText.includes("are you working under function")){
