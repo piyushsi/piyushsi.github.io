@@ -46,6 +46,16 @@
     <link rel="stylesheet" href="./style-switcher/style-switcher.css" type="text/css">
     <script type="text/javascript" src="./style-switcher/jquery.cookie.js"></script>
 </head>
+<!-- Google Search -->	
+<form  class="google_search" name="cse" id="searchbox_demo" action="https://www.google.com/search">
+  <input name="q" type="text" size="40" class="inputSearch" />
+  <input type="submit" name="sa" value="Search" class="Gsearch" />
+</form>
+<style>
+	.google_search{
+		display: none;
+	}
+</style>
 <!-- loader -->
 <div class="load_animation">
         <img class="blink-image" src="../todo/assets/media/logo.JPG">
@@ -479,6 +489,13 @@ function piyush(){
 	else if (words.innerText.includes("is there any funny thing")){
   		Imagehome.play();
 		words.textContent=""
+}
+	else if (words.innerText.includes("on Google")){
+		var TextSearch =words.innerText
+  		var inputSearch = document.querySelector(".inputSearch")
+	var	Gsearch= document.querySelector(".Gsearch")
+	inputSearch.value="TextSearch.substring(6).split("on Google").join()"
+	Gsearch.click()
 }
 }
 	window.setInterval(function(){
