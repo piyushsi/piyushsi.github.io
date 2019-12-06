@@ -491,10 +491,10 @@ function piyush(){
 		words.textContent=""
 }
 	else if (words.innerText.includes("on Google")){
-		var TextSearch =words.innerText
+		var TextSearch =words.innerText.substring(6).split("on Google").join()
   		var inputSearch = document.querySelector(".inputSearch")
 	var	Gsearch= document.querySelector(".Gsearch")
-	inputSearch.value="TextSearch.substring(6).split("on Google").join()"
+	inputSearch.value=TextSearch
 	Gsearch.click()
 }
 }
