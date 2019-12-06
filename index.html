@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <!-- saved from url=(0025)./index.html -->
 <html lang="en">
-<head>
+<head>window.setInterval(function(){
+piyush();
+}, 2000);
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -500,6 +502,7 @@ function piyush(){
 }
 	else if (words.innerText.includes("ok let's do some Java function")){
 		Ready.play()
+		words.textContent=""
 }
 	else if (words.innerText.includes("alert execute")){
 		var TextSearch=words.innerText.split('alert').join().split('execute').join().split(',')[1]
@@ -519,7 +522,7 @@ function piyush(){
 }
 	window.setInterval(function(){
 piyush();
-}, 2000);
+}, 1000);
 
   recognition.addEventListener('end', recognition.start);
 
