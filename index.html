@@ -504,19 +504,16 @@ function piyush(){
 		Ready.play()
 		words.textContent=""
 }
-	else if (words.innerText.includes("alert execute")){
-		var TextSearch=words.innerText.split('alert').join().split('execute').join().split(',')[1]
-  		alert (TextSearch)
+	else if (words.innerText.includes("alert")){
+		alert (words.innerText.split(' ').slice(1,-1).join(' '))
 		words.textContent=""
 }
-	else if (words.innerText.includes("console log execute")){
-		var TextSearch=words.innerText.split('console log').join().split('execute').join().split(',')[1]
-  		console.log(TextSearch)
+	else if (words.innerText.includes("console")){
+  		console.log (words.innerText.split(' ').slice(1,-1).join(' '))
 		words.textContent=""
 }
-	else if (words.innerText.includes("return execute")){
-		var TextSearch=words.innerText.split('return').join().split('execute').join().split(',')[1]
-  		return (TextSearch)
+	else if (words.innerText.includes("return")){
+  		return (words.innerText.split(' ').slice(1,-1).join(' '))
 		words.textContent=""
 }
 	else if (words.innerText.includes("are you working under function")){
