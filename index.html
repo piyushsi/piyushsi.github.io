@@ -2,8 +2,7 @@
 <!-- saved from url=(0025)./index.html -->
 <html lang="en">
 <head>
-<!--     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -28,11 +27,10 @@
     <!-- / -->
 
     <!-- Favicon -->
-<!--     <link rel="icon" href="http://inventheme.com/themeforest/ryan/ryan/favicon.ico"> -->
+    <!--     <link rel="icon" href="http://inventheme.com/themeforest/ryan/ryan/favicon.ico"> -->
     <!-- / -->
     <link rel="stylesheet" href="Ryan%20-%20Personal%20Portfolio%20Template_files/style-switcher.css" type="text/css">
-    <script type="text/javascript"
-            src="Ryan%20-%20Personal%20Portfolio%20Template_files/jquery.cookie.js.download"></script>
+    <script type="text/javascript" src="Ryan%20-%20Personal%20Portfolio%20Template_files/jquery.cookie.js.download"></script>
     <link rel="stylesheet" href="./style-switcher/style-switcher.css" type="text/css">
     <script type="text/javascript" src="./style-switcher/jquery.cookie.js"></script>
     <link rel="stylesheet" href="./style-switcher/style-switcher.css" type="text/css">
@@ -46,195 +44,295 @@
     <link rel="stylesheet" href="./style-switcher/style-switcher.css" type="text/css">
     <script type="text/javascript" src="./style-switcher/jquery.cookie.js"></script>
 </head>
-<!-- Google Search -->	
-<form  class="google_search" name="cse" id="searchbox_demo" action="https://www.google.com/search">
-  <input name="q" type="text" size="40" class="inputSearch" />
-  <input type="submit" name="sa" value="Search" class="Gsearch" />
+<!-- Google Search -->
+<form class="google_search" name="cse" id="searchbox_demo" action="https://www.google.com/search">
+    <input name="q" type="text" size="40" class="inputSearch" />
+    <input type="submit" name="sa" value="Search" class="Gsearch" />
 </form>
 <style>
-	.google_search{
-		display: none;
-	}
+    .google_search {
+        display: none;
+    }
 </style>
 <!-- loader -->
 <div class="load_animation">
-        <img class="blink-image" src="../todo/assets/media/logo.JPG">
-        <br>
-        <div class="lds-facebook"><div></div><div></div><div></div></div>
+    <img class="blink-image" src="../todo/assets/media/logo.JPG">
+    <br>
+    <div class="lds-facebook">
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
-    <script>
-        window.setInterval(function(){
-        var loaDer= document.querySelector(".load_animation")
-         loaDer.style.display="none";
-}, 2000);
-        
-    </script>
+    <a class="button_game" href="#">click to Play Snake Game on Home</a>
+</div>
 <style>
-    .load_animation{
+    .Show {
+        display: block;
+    }
+    
+    .button_game {
+        position: absolute;
+        bottom: 3rem;
+        background-color: #004A7F;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        border: none;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 20px;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        -webkit-animation: glowing 1500ms infinite;
+        -moz-animation: glowing 1500ms infinite;
+        -o-animation: glowing 1500ms infinite;
+        animation: glowing 1500ms infinite;
+    }
+    
+    @-webkit-keyframes glowing {
+        0% {
+            background-color: #5EBFEF;
+            -webkit-box-shadow: 0 0 3px #5EBFEF;
+        }
+        50% {
+            background-color: #FF0000;
+            -webkit-box-shadow: 0 0 40px #FF0000;
+        }
+        100% {
+            background-color: #5EBFEF;
+            -webkit-box-shadow: 0 0 3px #5EBFEF;
+        }
+    }
+    
+    @-moz-keyframes glowing {
+        0% {
+            background-color: #5EBFEF;
+            -moz-box-shadow: 0 0 3px #5EBFEF;
+        }
+        50% {
+            background-color: #FF0000;
+            -moz-box-shadow: 0 0 40px #FF0000;
+        }
+        100% {
+            background-color: #B20000;
+            -moz-box-shadow: 0 0 3px #5EBFEF;
+        }
+    }
+    
+    @-o-keyframes glowing {
+        0% {
+            background-color: #5EBFEF;
+            box-shadow: 0 0 3px #5EBFEF;
+        }
+        50% {
+            background-color: #FF0000;
+            box-shadow: 0 0 40px #FF0000;
+        }
+        100% {
+            background-color: #5EBFEF;
+            box-shadow: 0 0 3px #5EBFEF;
+        }
+    }
+    
+    @keyframes glowing {
+        0% {
+            background-color: #5EBFEF;
+            box-shadow: 0 0 3px #5EBFEF;
+        }
+        50% {
+            background-color: #FF0000;
+            box-shadow: 0 0 40px #FF0000;
+        }
+        100% {
+            background-color: #5EBFEF;
+            box-shadow: 0 0 3px #5EBFEF;
+        }
+    }
+    
+    .load_animation {
         z-index: 7;
-width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #242f3f;
-  display:flex;
-  justify-content: center;
-  align-items: center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #242f3f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    .blink-image{
-        height:14rem;
+    
+    .blink-image {
+        height: 14rem;
     }
+    
     @-moz-keyframes blink {
-    0% {
-        opacity:1;
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
-    50% {
-        opacity:0;
+    
+    @-webkit-keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
-    100% {
-        opacity:1;
+    /* IE */
+    
+    @-ms-keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
-} 
-
-@-webkit-keyframes blink {
-    0% {
-        opacity:1;
+    /* Opera and prob css3 final iteration */
+    
+    @keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
-    50% {
-        opacity:0;
+    
+    .blink-image {
+        -moz-animation: blink normal 2s infinite ease-in-out;
+        /* Firefox */
+        -webkit-animation: blink normal 2s infinite ease-in-out;
+        /* Webkit */
+        -ms-animation: blink normal 2s infinite ease-in-out;
+        /* IE */
+        animation: blink normal 2s infinite ease-in-out;
+        /* Opera and prob css3 final iteration */
     }
-    100% {
-        opacity:1;
-    }
-}
-/* IE */
-@-ms-keyframes blink {
-    0% {
-        opacity:1;
-    }
-    50% {
-        opacity:0;
-    }
-    100% {
-        opacity:1;
-    }
-} 
-/* Opera and prob css3 final iteration */
-@keyframes blink {
-    0% {
-        opacity:1;
-    }
-    50% {
-        opacity:0;
-    }
-    100% {
-        opacity:1;
-    }
-} 
-.blink-image {
-    -moz-animation: blink normal 2s infinite ease-in-out; /* Firefox */
-    -webkit-animation: blink normal 2s infinite ease-in-out; /* Webkit */
-    -ms-animation: blink normal 2s infinite ease-in-out; /* IE */
-    animation: blink normal 2s infinite ease-in-out; /* Opera and prob css3 final iteration */
-}
+    
     .lds-facebook {
-  position: absolute;
-  top: 70%;
-  left: 48%;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  width: 80px;
-  height: 80px;
-}
-.lds-facebook div {
-  display: inline-block;
-  position: absolute;
-  left: 8px;
-  width: 16px;
-  background: #5EBFEF;
-  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
-}
-.lds-facebook div:nth-child(1) {
-  left: 8px;
-  animation-delay: -0.24s;
-}
-.lds-facebook div:nth-child(2) {
-  left: 32px;
-  animation-delay: -0.12s;
-}
-.lds-facebook div:nth-child(3) {
-  left: 56px;
-  animation-delay: 0;
-}
-@keyframes lds-facebook {
-  0% {
-    top: 8px;
-    height: 64px;
-  }
-  50%, 100% {
-    top: 24px;
-    height: 32px;
-  }
-}
-
+        position: absolute;
+        top: 70%;
+        left: 48%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+    }
+    
+    .lds-facebook div {
+        display: inline-block;
+        position: absolute;
+        left: 8px;
+        width: 16px;
+        background: #5EBFEF;
+        animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+    }
+    
+    .lds-facebook div:nth-child(1) {
+        left: 8px;
+        animation-delay: -0.24s;
+    }
+    
+    .lds-facebook div:nth-child(2) {
+        left: 32px;
+        animation-delay: -0.12s;
+    }
+    
+    .lds-facebook div:nth-child(3) {
+        left: 56px;
+        animation-delay: 0;
+    }
+    
+    @keyframes lds-facebook {
+        0% {
+            top: 8px;
+            height: 64px;
+        }
+        50%,
+        100% {
+            top: 24px;
+            height: 32px;
+        }
+    }
 </style>
 <!-- loader -->
-	
+
 <!-- Body Start -->
+
 <body data-spy="scroll" data-target="#navbarRyan" data-offset="98">
 
-<!-- Loading -->
-<div id="loading" style="display: none;">
-    <div class="load-circle"><span class="one"></span></div>
-</div>
-<!-- / -->
+    <!-- Loading -->
+    <div id="loading" style="display: none;">
+        <div class="load-circle"><span class="one"></span></div>
+    </div>
+    <!-- / -->
 
-<!-- Header -->
-<header>
-    <nav class="navbar header-nav fixed-top navbar-expand-lg fixed-header">
-        <div class="container">
-            <!-- Brand -->
+    <!-- Header -->
+    <header>
+        <nav class="navbar header-nav fixed-top navbar-expand-lg fixed-header">
+            <div class="container">
+                <!-- Brand -->
 
-            <!-- / -->
+                <!-- / -->
 
-            <!-- Mobile Toggle -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarRyan"
-                    aria-controls="navbarRyan" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarRyan" aria-controls="navbarRyan" aria-expanded="false" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <!-- / -->
+                <!-- / -->
 
-            <!-- Top Menu -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarRyan">
-                <ul class="navbar-nav">
-                    <li><a class="nav-link" href="#">Home</a></li>
-                    <li><a class="nav-link" href="#aboutus">About Us</a></li>
-                    <li><a class="nav-link" href="#projects">Projects</a></li>
-                    <li><a class="nav-link" href="#blog">Blog</a></li>
-                    <li><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
+                <!-- Top Menu -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarRyan">
+                    <ul class="navbar-nav">
+                        <li><a class="nav-link" href="#">Home</a></li>
+                        <li><a class="nav-link" href="#aboutus">About Us</a></li>
+                        <li><a class="nav-link" href="#projects">Projects</a></li>
+                        <li><a class="nav-link" href="#blog">Blog</a></li>
+                        <li><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- / -->
+
             </div>
-            <!-- / -->
+            <!-- Container -->
+        </nav>
+        <!-- Navbar -->
+    </header>
+    <!-- Header End -->
 
-        </div><!-- Container -->
-    </nav> <!-- Navbar -->
-</header>
-<!-- Header End -->
-
-<!-- Main Start -->
-<main>
- <!-- snake game -->
+    <!-- Main Start -->
+    <main>
+        <!-- snake game -->
         <style>
-            canvas {
+            #game {
                 border: 1px solid transparent;
                 /* background-color: transparent; */
                 position: absolute;
                 top: 2rem;
                 z-index: 100;
+                display: none;
             }
         </style>
         <canvas width="1300" height="700" id="game"></canvas>
@@ -366,353 +464,356 @@ width: 100%;
             requestAnimationFrame(loop);
         </script>
         <!-- snake end -->
-    <!-- Home Banner Start -->
-    <section id="home" class="home-banner gray-bg" style="background-image: url(static/img/overlay-2.jpg);">
-        <div class="sec-round">
-            <div class="container full-height">
-                <div class="round-item round-item-1"></div>
-                <div class="round-item round-item-2"></div>
-                <div class="round-item round-item-3"></div>
-                <div class="round-item round-item-4"></div>
-                <div class="round-item round-item-5"></div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row full-screen align-items-center">
-                <div class="col col-md-12 col-lg-8 col-xl-6 p-80px-tb">
-                    <div class="home-text-center theme-after m-50px-t">
-                        <h4>Hello, My name is</h4>
-                        <h5 class="font-alt">Piyush Sinha</h5>
-                        <p>I'm Learning FSD (Full Stack Development)</p>
-                        <div class="btn-bar">
-                            <a href="./assets/piyushcv.pdf"
-                               class="m-btn-link m-btn-link-white theme-after">Download CV</a>
-                        </div>
-                    </div> <!-- home-text-center -->
-                </div> <!-- col -->
-            </div>
-
-        </div><!-- container -->
-        <a href="#aboutus" data-scroll="smooth"
-           class="mouse-icon hidden-sm"><span class="wheel"></span></a>
-        <canvas class="particles-js-canvas-el" width="653" height="618" style="width: 100%; height: 100%;"></canvas>
-    </section>
-    <!-- Home Banner End -->
-
-    <!-- About us -->
-    <section id="aboutus" class="section p-0px-b">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="about-left">
-                        <h2>I'm Piyush Sinha</h2>
-                        <h3>I'm Learning Full Stack Development and Part Time UX &amp; UI designer </h3>
-                        <p>I design and Modify Top Class Websites to Learn.</p>
-                        <p>My passion is to design digital user experiences through the bold interface and meaningful
-                            interactions. Check out my <a class="m-btn-link theme-after"
-                                                          href="https://www.linkedin.com/in/piyushsinha1/">LinkedIn</a>
-                        </p>
-                        <a class="m-btn m-btn-theme"
-                           href="#contact" data-scroll="smooth">Contact us <i
-                                class="ti-arrow-right"></i></a>
-                    </div>
-                </div> <!-- col -->
-
-                <div class="col-md-6 text-center sm-m-45px-t">
-                    <img src="Ryan%20-%20Personal%20Portfolio%20Template_files/man.jpg" title="" alt="">
-                </div> <!-- col -->
-
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-    <!-- / -->
- <section id="projects" class="section p-0px-b">
-       <h2 class="font-alt">Projects</h2>
-        <p>1. Todo <a href="https://piyushsi.github.io/todo/"> Open</a><br>2. ID Card Generator <a href="https://piyushsi.github.io/IDCG/"> Open</a><br>3.Pevento-Event Management System UI <a href="https://piyushsi.github.io/pevento/"> Open</a><br>4.Altcampus UI <a href="https://piyushsi.github.io/altcampus/"> Open</a></p>
-        <iframe id="P_iframe" src="../todo"></iframe>
-        <iframe id="P_iframe"  src="../IDCG"></iframe>
-        <iframe id="P_iframe"  src="../pevento"></iframe>
-       <iframe id="P_iframe1"  src="../altcampus"></iframe>
-    
-       <style type="text/css">
-           #P_iframe {
-            height: 30rem;
-            width: 25rem;
-           }
-           #P_iframe1 {
-            height: 25rem;
-            width: 80rem;
-           }
-           #projects {
-            text-align: center;
-           }
-       </style>
-    </section>
-
-    <!-- Contact Start -->
-    <section id="contact" class="section p-0px-b contact-section">
-        <div class="container">
-            <div class="row justify-content-center m-60px-b md-m-40px-b">
-                <div class="col-12 col-md-10 col-lg-7">
-                    <div class="section-title text-center">
-                        <h2 class="font-alt">Contact Us</h2>
-                        <p>I design and develop services for customers of all sizes, specializing in creating stylish,
-                            modern websites, web services and online stores. My passion is to design digital user
-                            experiences through the bold interface.</p>
-                    </div>
+        <!-- Home Banner Start -->
+        <section id="home" class="home-banner gray-bg" style="background-image: url(static/img/overlay-2.jpg);">
+            <div class="sec-round">
+                <div class="container full-height">
+                    <div class="round-item round-item-1"></div>
+                    <div class="round-item round-item-2"></div>
+                    <div class="round-item round-item-3"></div>
+                    <div class="round-item round-item-4"></div>
+                    <div class="round-item round-item-5"></div>
                 </div>
-                <marquee behavior="scroll" direction="right" scrollamount="6.99">
-					Keep Calm — Learn — Earn<img src="../altcampus/assets/media/euc.gif" style="height: 120px; width: 120px">
-					</marquee>
             </div>
 
-            <div class="contact-us-box">
-                <div class="row no-gutters">
-                    <div class="col-md-6">
-                        <div class="contact-info-box">
-                            <h2>get in touch</h2>
-                            <p class="desc">Get in touch for any other queries related to #euc #unicycle 🎡#Traveller ✈️ 🧗🏻‍♂️#coder #programmer 💻#designer 💠#player 🏸🏓🏀🎱⚽️🏐#athlete #photographer 📸 #creator 🎞#editor #rapper 🎤#dancer🕺🏼</p>
-                            <div class="contact-info">
-                                <i class="icon theme-bg ti-direction"></i>
-                                <p>Beguluru<br> Karnatraka, India</p>
-                            </div>
-
-                            <div class="contact-info">
-                                <i class="icon theme-bg ti-email"></i>
-                                <p>piyushsinha2309@gmail.com<br>tech2in4m@gmail.com</p>
-                            </div>
-
-                            <div class="contact-info">
-                                <i class="icon theme-bg ti-mobile"></i>
-                                <p>+91 799 112 8371,<br> +91 829 424 0190</p>
+            <div class="container">
+                <div class="row full-screen align-items-center">
+                    <div class="col col-md-12 col-lg-8 col-xl-6 p-80px-tb">
+                        <div class="home-text-center theme-after m-50px-t">
+                            <h4>Hello, My name is</h4>
+                            <h5 class="font-alt">Piyush Sinha</h5>
+                            <p>I'm Learning FSD (Full Stack Development)</p>
+                            <div class="btn-bar">
+                                <a href="./assets/piyushcv.pdf" class="m-btn-link m-btn-link-white theme-after">Download CV</a>
                             </div>
                         </div>
+                        <!-- home-text-center -->
                     </div>
+                    <!-- col -->
+                </div>
+
+            </div>
+            <!-- container -->
+            <a href="#aboutus" data-scroll="smooth" class="mouse-icon hidden-sm"><span class="wheel"></span></a>
+            <canvas class="particles-js-canvas-el" width="653" height="618" style="width: 100%; height: 100%;"></canvas>
+        </section>
+        <!-- Home Banner End -->
+
+        <!-- About us -->
+        <section id="aboutus" class="section p-0px-b">
+            <div class="container">
+                <div class="row align-items-center">
                     <div class="col-md-6">
-                        <!-- Contact Form -->
-                        <div class="contact-form">
-                            <h2>Say Something</h2>
-                            <form>
-                                <div class="form-group">
-                                    <input id="phone" name="Phone" placeholder="Name" class="form-control" type="text">
+                        <div class="about-left">
+                            <h2>I'm Piyush Sinha</h2>
+                            <h3>I'm Learning Full Stack Development and Part Time UX &amp; UI designer </h3>
+                            <p>I design and Modify Top Class Websites to Learn.</p>
+                            <p>My passion is to design digital user experiences through the bold interface and meaningful interactions. Check out my <a class="m-btn-link theme-after" href="https://www.linkedin.com/in/piyushsinha1/">LinkedIn</a>
+                            </p>
+                            <a class="m-btn m-btn-theme" href="#contact" data-scroll="smooth">Contact us <i
+                                class="ti-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- col -->
+
+                    <div class="col-md-6 text-center sm-m-45px-t">
+                        <img src="Ryan%20-%20Personal%20Portfolio%20Template_files/man.jpg" title="" alt="">
+                    </div>
+                    <!-- col -->
+
+                </div>
+                <!-- row -->
+            </div>
+            <!-- container -->
+        </section>
+        <!-- / -->
+        <section id="projects" class="section p-0px-b">
+            <h2 class="font-alt">Projects</h2>
+            <p>1. Todo <a href="https://piyushsi.github.io/todo/"> Open</a><br>2. ID Card Generator <a href="https://piyushsi.github.io/IDCG/"> Open</a><br>3.Pevento-Event Management System UI <a href="https://piyushsi.github.io/pevento/"> Open</a><br>4.Altcampus
+                UI <a href="https://piyushsi.github.io/altcampus/"> Open</a></p>
+            <iframe id="P_iframe" src="../todo"></iframe>
+            <iframe id="P_iframe" src="../IDCG"></iframe>
+            <iframe id="P_iframe" src="../pevento"></iframe>
+            <iframe id="P_iframe1" src="../altcampus"></iframe>
+
+            <style type="text/css">
+                #P_iframe {
+                    height: 30rem;
+                    width: 25rem;
+                }
+                
+                #P_iframe1 {
+                    height: 25rem;
+                    width: 80rem;
+                }
+                
+                #projects {
+                    text-align: center;
+                }
+            </style>
+        </section>
+
+        <!-- Contact Start -->
+        <section id="contact" class="section p-0px-b contact-section">
+            <div class="container">
+                <div class="row justify-content-center m-60px-b md-m-40px-b">
+                    <div class="col-12 col-md-10 col-lg-7">
+                        <div class="section-title text-center">
+                            <h2 class="font-alt">Contact Us</h2>
+                            <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences through the bold interface.</p>
+                        </div>
+                    </div>
+                    <marquee behavior="scroll" direction="right" scrollamount="6.99">
+                        Keep Calm — Learn — Earn<img src="../altcampus/assets/media/euc.gif" style="height: 120px; width: 120px">
+                    </marquee>
+                </div>
+
+                <div class="contact-us-box">
+                    <div class="row no-gutters">
+                        <div class="col-md-6">
+                            <div class="contact-info-box">
+                                <h2>get in touch</h2>
+                                <p class="desc">Get in touch for any other queries related to #euc #unicycle 🎡#Traveller ✈️ 🧗🏻‍♂️#coder #programmer 💻#designer 💠#player 🏸🏓🏀🎱⚽️🏐#athlete #photographer 📸 #creator 🎞#editor #rapper 🎤#dancer🕺🏼</p>
+                                <div class="contact-info">
+                                    <i class="icon theme-bg ti-direction"></i>
+                                    <p>Beguluru<br> Karnatraka, India</p>
                                 </div>
-                                <div class="form-group">
-                                    <input id="email" name="Email" placeholder="Emaile" class="form-control" type="email">
+
+                                <div class="contact-info">
+                                    <i class="icon theme-bg ti-email"></i>
+                                    <p>piyushsinha2309@gmail.com<br>tech2in4m@gmail.com</p>
                                 </div>
-                                <div class="form-group">
-                                    <input id="subject" name="Subject" placeholder="Subject" class="form-control" type="text">
+
+                                <div class="contact-info">
+                                    <i class="icon theme-bg ti-mobile"></i>
+                                    <p>+91 799 112 8371,<br> +91 829 424 0190</p>
                                 </div>
-                                <div class="form-group">
-                                    <textarea id="comment" name="comment" placeholder="Describe your project" rows="3"
-                                              class="form-control"></textarea>
-                                </div>
-                                <div class="send">
-                                    <button id="submit-form" class="m-btn m-btn-theme"><i class="fa fa-envelope-o"
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- Contact Form -->
+                            <div class="contact-form">
+                                <h2>Say Something</h2>
+                                <form>
+                                    <div class="form-group">
+                                        <input id="phone" name="Phone" placeholder="Name" class="form-control" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="email" name="Email" placeholder="Emaile" class="form-control" type="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="subject" name="Subject" placeholder="Subject" class="form-control" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea id="comment" name="comment" placeholder="Describe your project" rows="3" class="form-control"></textarea>
+                                    </div>
+                                    <div class="send">
+                                        <button id="submit-form" class="m-btn m-btn-theme"><i class="fa fa-envelope-o"
                                                                          aria-hidden="true"></i>Send
                                     </button>
-                                </div>
-                            </form>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- / -->
                         </div>
-                        <!-- / -->
-                    </div>
 
+                    </div>
                 </div>
             </div>
-        </div> <!-- Container -->
-    </section>
-    <!-- Contact End -->
+            <!-- Container -->
+        </section>
+        <!-- Contact End -->
 
-</main>
-<!-- Main End -->
+    </main>
+    <!-- Main End -->
 
-<!-- Footer-->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-logo">
-            <span>Piyush <span></span></span>
+    <!-- Footer-->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <span>Piyush <span></span></span>
+            </div>
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/inpiyushsinha"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li><a href="https://twitter.com/inpiyushsinha"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li><a href="https://www.instagram.com/inpiyushsinha/"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li><a href="https://github.com/piyushsi"><i class="fab fa-github"></i></i></a></li>
+            </ul>
+            <p class="copyright">© 2019 Piyush. All Rights Reserved</p>
         </div>
-        <ul class="social-icons">
-            <li><a href="https://www.facebook.com/inpiyushsinha"><i class="fab fa-facebook-f"></i></a>
-            </li>
-            <li><a href="https://twitter.com/inpiyushsinha"><i class="fab fa-twitter"></i></a>
-            </li>
-            <li><a href="https://www.instagram.com/inpiyushsinha/"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li><a href="https://github.com/piyushsi"><i class="fab fa-github"></i></i></a></li>
-        </ul>
-        <p class="copyright">© 2019 Piyush. All Rights Reserved</p>
+    </footer>
+
+    <div class="words" contenteditable>
     </div>
-</footer>
 
-<div class="words" contenteditable>
-  </div>
+    <script>
+        window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
-<script>
-  window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        const recognition = new SpeechRecognition();
+        recognition.interimResults = true;
+        recognition.lang = 'en-US';
 
-  const recognition = new SpeechRecognition();
-  recognition.interimResults = true;
-  recognition.lang = 'en-US';
-  
-  let p = document.createElement('p');
-  const words = document.querySelector('.words');
-  words.appendChild(p);
-
-  recognition.addEventListener('result', e => {
-    const transcript = Array.from(e.results)
-      .map(result => result[0])
-      .map(result => result.transcript)
-      .join('');
-
-      const poopScript = transcript.replace(/poop|poo|shit|dump/gi, '💩');
-      p.textContent = poopScript;
-
-      if (e.results[0].isFinal) {
-        p = document.createElement('p');
+        let p = document.createElement('p');
+        const words = document.querySelector('.words');
         words.appendChild(p);
-      }
-  });
-function piyush(){
- 	var Hello = new Audio('../todo/assets/media/Hello.mp3');
-	var Contact = new Audio('../todo/assets/media/Contact.mp3');
-	var Project = new Audio('../todo/assets/media/Projects.mp3');
-	var Whoru = new Audio('../todo/assets/media/whoru.mp3');
-	var Ankit = new Audio('../todo/assets/media/Ankit.mp3');
-	var About = new Audio('../todo/assets/media/About.mp3');
-	var Home = new Audio('../todo/assets/media/Home.mp3');
-	var Imagehome = new Audio('../todo/assets/media/Imagehome.mp3');
-	var Ready = new Audio('../todo/assets/media/Ready.mp3');
-	var Destroy = new Audio('../todo/assets/media/Destroy.mp3');
-	var Hof = new Audio('../todo/assets/media/Hof.mp3');
-	var Change = new Audio('../todo/assets/media/Change.mp3');
-	
-  	if (words.innerText.includes("project")){
-  		window.location.replace("https://piyushsi.github.io/#projects");
-		Project.play();
-		words.textContent=""
-}
-	else if (words.innerText.includes("contact")){
-  		window.location.replace("https://piyushsi.github.io/#contact");
-		Contact.play();
-		words.textContent=""
-}
-	else if (words.innerText.includes("about")){
-  		window.location.replace("https://piyushsi.github.io/#aboutus");
-		Hello.play();
-		words.textContent=""
-}
-	else if (words.innerText.includes("home")){
-  		window.location.replace("https://piyushsi.github.io/#");
-		Home.play();
-		words.textContent=""
-}
-	 else if (words.innerText.includes("down")){
-  		window.scrollBy(0, 200);
-		words.textContent=""
-}
-	 
-	 else if (words.innerText.includes("up")){
-  		window.scrollBy(0, -200);
-		words.textContent=""
-}
-	 else if (words.innerText.includes("who are you")){
-  		Whoru.play();
-		words.textContent=""
-}
- 	else if (words.innerText.includes("hello")){
-  		Hello.play();
-		words.textContent=""
-}
-	else if (words.innerText.includes("do you know Ankit")){
-  		Ankit.play();
-		words.textContent=""
-}
-	else if (words.innerText.includes("is there any funny thing")){
-  		Imagehome.play();
-		words.textContent=""
-}
-	else if (words.innerText.includes("on Google")){
-		var TextSearch =words.innerText.substring(9).split("on Google").join().split(",")[0]
-  		var inputSearch = document.querySelector(".inputSearch")
-	var	Gsearch= document.querySelector(".Gsearch")
-	inputSearch.value=TextSearch
-	Gsearch.click()
-}
-	else if (words.innerText.includes("ok let's do some Java function")){
-		Ready.play()
-		words.textContent=""
-}
-	else if (words.innerText.includes("alert")){
-		alert (words.innerText.split(' ').slice(1,-1).join(' '))
-		words.textContent=""
-}
-	else if (words.innerText.includes("console")){
-  		console.log (words.innerText.split(' ').slice(1,-1).join(' '))
-		words.textContent=""
-}
-	else if (words.innerText.includes("return")){
-		var change = document.querySelector('h5')
-		change.innerText=words.innerText.split(' ').slice(1,-1).join(' ')
-		words.textContent=""
-		Change.play()
-}
-	else if (words.innerText.includes("are you working under function")){
-		Hof.play()
-		words.textContent=""
-}
-	else if (words.innerText.includes("function destroy")){
-		Destroy.play()
-		clearInterval();
-}
-}
-	window.setInterval(function(){
-piyush();
-}, 1000);
 
-  recognition.addEventListener('end', recognition.start);
+        recognition.addEventListener('result', e => {
+            const transcript = Array.from(e.results)
+                .map(result => result[0])
+                .map(result => result.transcript)
+                .join('');
 
-  recognition.start();
+            const poopScript = transcript.replace(/poop|poo|shit|dump/gi, '💩');
+            p.textContent = poopScript;
 
-</script>
+            if (e.results[0].isFinal) {
+                p = document.createElement('p');
+                words.appendChild(p);
+            }
+        });
+
+        function piyush() {
+            var Hello = new Audio('../todo/assets/media/Hello.mp3');
+            var Contact = new Audio('../todo/assets/media/Contact.mp3');
+            var Project = new Audio('../todo/assets/media/Projects.mp3');
+            var Whoru = new Audio('../todo/assets/media/whoru.mp3');
+            var Ankit = new Audio('../todo/assets/media/Ankit.mp3');
+            var About = new Audio('../todo/assets/media/About.mp3');
+            var Home = new Audio('../todo/assets/media/Home.mp3');
+            var Imagehome = new Audio('../todo/assets/media/Imagehome.mp3');
+            var Ready = new Audio('../todo/assets/media/Ready.mp3');
+            var Destroy = new Audio('../todo/assets/media/Destroy.mp3');
+            var Hof = new Audio('../todo/assets/media/Hof.mp3');
+            var Change = new Audio('../todo/assets/media/Change.mp3');
+
+            if (words.innerText.includes("project")) {
+                window.location.replace("https://piyushsi.github.io/#projects");
+                Project.play();
+                words.textContent = ""
+            } else if (words.innerText.includes("contact")) {
+                window.location.replace("https://piyushsi.github.io/#contact");
+                Contact.play();
+                words.textContent = ""
+            } else if (words.innerText.includes("about")) {
+                window.location.replace("https://piyushsi.github.io/#aboutus");
+                Hello.play();
+                words.textContent = ""
+            } else if (words.innerText.includes("home")) {
+                window.location.replace("https://piyushsi.github.io/#");
+                Home.play();
+                words.textContent = ""
+            } else if (words.innerText.includes("down")) {
+                window.scrollBy(0, 200);
+                words.textContent = ""
+            } else if (words.innerText.includes("up")) {
+                window.scrollBy(0, -200);
+                words.textContent = ""
+            } else if (words.innerText.includes("who are you")) {
+                Whoru.play();
+                words.textContent = ""
+            } else if (words.innerText.includes("hello")) {
+                Hello.play();
+                words.textContent = ""
+            } else if (words.innerText.includes("do you know Ankit")) {
+                Ankit.play();
+                words.textContent = ""
+            } else if (words.innerText.includes("is there any funny thing")) {
+                Imagehome.play();
+                words.textContent = ""
+            } else if (words.innerText.includes("on Google")) {
+                var TextSearch = words.innerText.substring(9).split("on Google").join().split(",")[0]
+                var inputSearch = document.querySelector(".inputSearch")
+                var Gsearch = document.querySelector(".Gsearch")
+                inputSearch.value = TextSearch
+                Gsearch.click()
+            } else if (words.innerText.includes("ok let's do some Java function")) {
+                Ready.play()
+                words.textContent = ""
+            } else if (words.innerText.includes("alert")) {
+                alert(words.innerText.split(' ').slice(1, -1).join(' '))
+                words.textContent = ""
+            } else if (words.innerText.includes("console")) {
+                console.log(words.innerText.split(' ').slice(1, -1).join(' '))
+                words.textContent = ""
+            } else if (words.innerText.includes("return")) {
+                var change = document.querySelector('h5')
+                change.innerText = words.innerText.split(' ').slice(1, -1).join(' ')
+                words.textContent = ""
+                Change.play()
+            } else if (words.innerText.includes("are you working under function")) {
+                Hof.play()
+                words.textContent = ""
+            } else if (words.innerText.includes("function destroy")) {
+                Destroy.play()
+                clearInterval();
+            }
+        }
+        window.setInterval(function() {
+            piyush();
+        }, 1000);
+
+        recognition.addEventListener('end', recognition.start);
+
+        recognition.start();
+    </script>
 
 
-  <style>
-    .words:before {
-      content: '';
-      position: absolute;
-      width: 4px;
-      top: 0;
-      left: 30px;
-      bottom: 0;
-      border: 1px solid;
-      border-color: transparent #efe4e4;
-    }
-    .words{
-      display: none;
-    }
-	  html {
-  scroll-behavior: smooth;
-}
-</style>
-<!-- jQuery -->
-<script src="Ryan%20-%20Personal%20Portfolio%20Template_files/jquery-3.2.1.min.js.download"></script>
-<script src="Ryan%20-%20Personal%20Portfolio%20Template_files/jquery-migrate-3.0.0.min.js.download"></script>
+    <style>
+        .words:before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            top: 0;
+            left: 30px;
+            bottom: 0;
+            border: 1px solid;
+            border-color: transparent #efe4e4;
+        }
+        
+        .words {
+            display: none;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <!-- loader script -->
+    <script>
+        window.setInterval(function() {
+            var loaDer = document.querySelector(".load_animation")
+            loaDer.style.display = "none";
+        }, 3000);
+        var gameOn = document.querySelector('.button_game')
+        var gameDisplay = document.getElementById('game')
+        gameOn.addEventListener('click', e => {
+            window.setInterval(function() {
+                gameDisplay.style.display = "block";
+            }, 1000);
+        })
+    </script>
+    <!-- jQuery -->
+    <script src="Ryan%20-%20Personal%20Portfolio%20Template_files/jquery-3.2.1.min.js.download"></script>
+    <script src="Ryan%20-%20Personal%20Portfolio%20Template_files/jquery-migrate-3.0.0.min.js.download"></script>
 
-<!-- Pluginsg -->
-<script src="Ryan%20-%20Personal%20Portfolio%20Template_files/popper.min.js.download"></script>
-<script src="Ryan%20-%20Personal%20Portfolio%20Template_files/bootstrap.min.js.download"></script>
-<script src="Ryan%20-%20Personal%20Portfolio%20Template_files/owl.carousel.min.js.download"></script>
-<script src="Ryan%20-%20Personal%20Portfolio%20Template_files/isotope.pkgd.min.js.download"></script>
-<script src="Ryan%20-%20Personal%20Portfolio%20Template_files/jquery.magnific-popup.min.js.download"></script>
-<script src="Ryan%20-%20Personal%20Portfolio%20Template_files/particles.min.js.download"></script>
-<script src="Ryan%20-%20Personal%20Portfolio%20Template_files/particles-app.js.download"></script>
-<script src="static/formResponse.js"></script>
+    <!-- Pluginsg -->
+    <script src="Ryan%20-%20Personal%20Portfolio%20Template_files/popper.min.js.download"></script>
+    <script src="Ryan%20-%20Personal%20Portfolio%20Template_files/bootstrap.min.js.download"></script>
+    <script src="Ryan%20-%20Personal%20Portfolio%20Template_files/owl.carousel.min.js.download"></script>
+    <script src="Ryan%20-%20Personal%20Portfolio%20Template_files/isotope.pkgd.min.js.download"></script>
+    <script src="Ryan%20-%20Personal%20Portfolio%20Template_files/jquery.magnific-popup.min.js.download"></script>
+    <script src="Ryan%20-%20Personal%20Portfolio%20Template_files/particles.min.js.download"></script>
+    <script src="Ryan%20-%20Personal%20Portfolio%20Template_files/particles-app.js.download"></script>
+    <script src="static/formResponse.js"></script>
 
-<!-- custom -->
-<script src="Ryan%20-%20Personal%20Portfolio%20Template_files/custom.js.download"></script>
-<link rel="stylesheet" href="Ryan%20-%20Personal%20Portfolio%20Template_files/style-switcher.css">
-<!-- Body End -->
+    <!-- custom -->
+    <script src="Ryan%20-%20Personal%20Portfolio%20Template_files/custom.js.download"></script>
+    <link rel="stylesheet" href="Ryan%20-%20Personal%20Portfolio%20Template_files/style-switcher.css">
+    <!-- Body End -->
 
 </body>
+
 </html>
