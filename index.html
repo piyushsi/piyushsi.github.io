@@ -527,8 +527,8 @@
             <!-- container -->
         </section>
         <!-- / -->
-        <section id="projects" class="section p-0px-b" style="background-color: #E6E5EA;">
-            <h1 style="text-align: center;">Projects</h1>
+         <section id="projects" class="section p-0px-b" style="background-color: #E6E5EA;">
+            <h1 class="props" style="text-align: center; cursor: pointer;">Projects</h1>
             <iframe class="if" src="https://piyushsi.me/projects"></iframe>
             <style>
                 .if {
@@ -537,6 +537,14 @@
                     border: none;
                 }
             </style>
+            <script>
+                var props = document.querySelector('.props')
+                var ifr = document.querySelector('.if')
+                props.addEventListener('click', e => {
+                    console.log('piyush')
+                    ifr.src = "https://piyushsi.me/projects"
+                })
+            </script>
         </section>
 
         <!-- Contact Start -->
