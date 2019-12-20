@@ -643,118 +643,171 @@
     <div class="words" contenteditable>
     </div>
 
-    <script>
-        window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-
-        const recognition = new SpeechRecognition();
-        recognition.interimResults = true;
-        recognition.lang = 'en-US';
-
-        let p = document.createElement('p');
-        const words = document.querySelector('.words');
-        words.appendChild(p);
-
-        recognition.addEventListener('result', e => {
-            const transcript = Array.from(e.results)
-                .map(result => result[0])
-                .map(result => result.transcript)
-                .join('');
-
-            const poopScript = transcript.replace(/poop|poo|shit|dump/gi, '💩');
-            p.textContent = poopScript;
-
-            if (e.results[0].isFinal) {
-                p = document.createElement('p');
-                words.appendChild(p);
+   <button id="Rec">Recording</button>
+    <style>
+        #Rec {
+            width: 35px;
+            height: 35px;
+            font-size: 0;
+            background-color: red;
+            border: 0;
+            border-radius: 35px;
+            margin: 18px;
+            outline: none;
+            position: fixed;
+            bottom: 0;
+        }
+        
+        .Rec {
+            animation-name: pulse;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0px 0px 5px 0px rgba(173, 0, 0, .3);
             }
-        });
-
-        function piyush() {
-            var Hello = new Audio('../todo/assets/media/Hello.mp3');
-            var Contact = new Audio('../todo/assets/media/Contact.mp3');
-            var Project = new Audio('../todo/assets/media/Projects.mp3');
-            var Whoru = new Audio('../todo/assets/media/whoru.mp3');
-            var Ankit = new Audio('../todo/assets/media/Ankit.mp3');
-            var About = new Audio('../todo/assets/media/About.mp3');
-            var Home = new Audio('../todo/assets/media/Home.mp3');
-            var Imagehome = new Audio('../todo/assets/media/Imagehome.mp3');
-            var Ready = new Audio('../todo/assets/media/Ready.mp3');
-            var Destroy = new Audio('../todo/assets/media/Destroy.mp3');
-            var Hof = new Audio('../todo/assets/media/Hof.mp3');
-            var Change = new Audio('../todo/assets/media/Change.mp3');
-
-            if (words.innerText.includes("project")) {
-                window.location.replace("https://piyushsi.github.io/#projects");
-                Project.play();
-                words.textContent = ""
-            } else if (words.innerText.includes("contact")) {
-                window.location.replace("https://piyushsi.github.io/#contact");
-                Contact.play();
-                words.textContent = ""
-            } else if (words.innerText.includes("about")) {
-                window.location.replace("https://piyushsi.github.io/#aboutus");
-                Hello.play();
-                words.textContent = ""
-            } else if (words.innerText.includes("home")) {
-                window.location.replace("https://piyushsi.github.io/#");
-                Home.play();
-                words.textContent = ""
-            } else if (words.innerText.includes("down")) {
-                window.scrollBy(0, 200);
-                words.textContent = ""
-            } else if (words.innerText.includes("up")) {
-                window.scrollBy(0, -200);
-                words.textContent = ""
-            } else if (words.innerText.includes("who are you")) {
-                Whoru.play();
-                words.textContent = ""
-            } else if (words.innerText.includes("hello")) {
-                Hello.play();
-                words.textContent = ""
-            } else if (words.innerText.includes("do you know Ankit")) {
-                Ankit.play();
-                words.textContent = ""
-            } else if (words.innerText.includes("is there any funny thing")) {
-                Imagehome.play();
-                words.textContent = ""
-            } else if (words.innerText.includes("on Google")) {
-                var TextSearch = words.innerText.substring(9).split("on Google").join().split(",")[0]
-                var inputSearch = document.querySelector(".inputSearch")
-                var Gsearch = document.querySelector(".Gsearch")
-                inputSearch.value = TextSearch
-                Gsearch.click()
-            } else if (words.innerText.includes("ok let's do some Java function")) {
-                Ready.play()
-                words.textContent = ""
-            } else if (words.innerText.includes("alert")) {
-                alert(words.innerText.split(' ').slice(1, -1).join(' '))
-                words.textContent = ""
-            } else if (words.innerText.includes("console")) {
-                console.log(words.innerText.split(' ').slice(1, -1).join(' '))
-                words.textContent = ""
-            } else if (words.innerText.includes("return")) {
-                var change = document.querySelector('h5')
-                change.innerText = words.innerText.split(' ').slice(1, -1).join(' ')
-                words.textContent = ""
-                Change.play()
-            } else if (words.innerText.includes("are you working under function")) {
-                Hof.play()
-                words.textContent = ""
-            } else if (words.innerText.includes("function destroy")) {
-                Destroy.play()
-                clearInterval();
+            65% {
+                box-shadow: 0px 0px 5px 13px rgba(173, 0, 0, .3);
+            }
+            90% {
+                box-shadow: 0px 0px 5px 13px rgba(173, 0, 0, 0);
             }
         }
+    </style>
+  <script>
         window.setInterval(function() {
-            piyush();
-        }, 1000);
-
-        recognition.addEventListener('end', recognition.start);
-
-        recognition.start();
+            var loaDer = document.querySelector(".load_animation")
+            loaDer.style.display = "none";
+        }, 3000);
+        var gameOn = document.querySelector('.button_game')
+        var gameDisplay = document.getElementById('game')
+        gameOn.addEventListener('click', e => {
+            window.setInterval(function() {
+                gameDisplay.style.display = "block";
+            }, 1000);
+        })
     </script>
+    <script>
+        function speechRec() {
+            window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
+            const recognition = new SpeechRecognition();
+            recognition.interimResults = true;
+            recognition.lang = 'en-US';
 
+            let p = document.createElement('p');
+            const words = document.querySelector('.words');
+            words.appendChild(p);
+
+            recognition.addEventListener('result', e => {
+                const transcript = Array.from(e.results)
+                    .map(result => result[0])
+                    .map(result => result.transcript)
+                    .join('');
+
+                const poopScript = transcript.replace(/poop|poo|shit|dump/gi, '💩');
+                p.textContent = poopScript;
+
+                if (e.results[0].isFinal) {
+                    p = document.createElement('p');
+                    words.appendChild(p);
+                }
+            });
+
+            function piyush() {
+                var Hello = new Audio('../todo/assets/media/Hello.mp3');
+                var Contact = new Audio('../todo/assets/media/Contact.mp3');
+                var Project = new Audio('../todo/assets/media/Projects.mp3');
+                var Whoru = new Audio('../todo/assets/media/whoru.mp3');
+                var Ankit = new Audio('../todo/assets/media/Ankit.mp3');
+                var About = new Audio('../todo/assets/media/About.mp3');
+                var Home = new Audio('../todo/assets/media/Home.mp3');
+                var Imagehome = new Audio('../todo/assets/media/Imagehome.mp3');
+                var Ready = new Audio('../todo/assets/media/Ready.mp3');
+                var Destroy = new Audio('../todo/assets/media/Destroy.mp3');
+                var Hof = new Audio('../todo/assets/media/Hof.mp3');
+                var Change = new Audio('../todo/assets/media/Change.mp3');
+
+                if (words.innerText.includes("project")) {
+                    window.location.replace("https://piyushsi.github.io/#projects");
+                    Project.play();
+                    words.textContent = ""
+                } else if (words.innerText.includes("contact")) {
+                    window.location.replace("https://piyushsi.github.io/#contact");
+                    Contact.play();
+                    words.textContent = ""
+                } else if (words.innerText.includes("about")) {
+                    window.location.replace("https://piyushsi.github.io/#aboutus");
+                    Hello.play();
+                    words.textContent = ""
+                } else if (words.innerText.includes("home")) {
+                    window.location.replace("https://piyushsi.github.io/#");
+                    Home.play();
+                    words.textContent = ""
+                } else if (words.innerText.includes("down")) {
+                    window.scrollBy(0, 200);
+                    words.textContent = ""
+                } else if (words.innerText.includes("up")) {
+                    window.scrollBy(0, -200);
+                    words.textContent = ""
+                } else if (words.innerText.includes("who are you")) {
+                    Whoru.play();
+                    words.textContent = ""
+                } else if (words.innerText.includes("hello")) {
+                    Hello.play();
+                    words.textContent = ""
+                } else if (words.innerText.includes("do you know Ankit")) {
+                    Ankit.play();
+                    words.textContent = ""
+                } else if (words.innerText.includes("is there any funny thing")) {
+                    Imagehome.play();
+                    words.textContent = ""
+                } else if (words.innerText.includes("on Google")) {
+                    var TextSearch = words.innerText.substring(9).split("on Google").join().split(",")[0]
+                    var inputSearch = document.querySelector(".inputSearch")
+                    var Gsearch = document.querySelector(".Gsearch")
+                    inputSearch.value = TextSearch
+                    Gsearch.click()
+                } else if (words.innerText.includes("ok let's do some Java function")) {
+                    Ready.play()
+                    words.textContent = ""
+                } else if (words.innerText.includes("alert")) {
+                    alert(words.innerText.split(' ').slice(1, -1).join(' '))
+                    words.textContent = ""
+                } else if (words.innerText.includes("console")) {
+                    console.log(words.innerText.split(' ').slice(1, -1).join(' '))
+                    words.textContent = ""
+                } else if (words.innerText.includes("return")) {
+                    var change = document.querySelector('h5')
+                    change.innerText = words.innerText.split(' ').slice(1, -1).join(' ')
+                    words.textContent = ""
+                    Change.play()
+                } else if (words.innerText.includes("are you working under function")) {
+                    Hof.play()
+                    words.textContent = ""
+                } else if (words.innerText.includes("function destroy")) {
+                    Destroy.play()
+                    words.textContent = ""
+                    clearInterval();
+                }
+            }
+            window.setInterval(function() {
+                piyush();
+            }, 1000);
+
+            recognition.addEventListener('end', recognition.start);
+
+            recognition.start();
+        }
+        var Rec = document.getElementById('Rec')
+        Rec.addEventListener('click', e => {
+            Rec.classList.add("Rec")
+            speechRec();
+        })
+    </script>
     <style>
         .words:before {
             content: '';
@@ -776,19 +829,7 @@
         }
     </style>
     <!-- loader script -->
-    <script>
-        window.setInterval(function() {
-            var loaDer = document.querySelector(".load_animation")
-            loaDer.style.display = "none";
-        }, 3000);
-        var gameOn = document.querySelector('.button_game')
-        var gameDisplay = document.getElementById('game')
-        gameOn.addEventListener('click', e => {
-            window.setInterval(function() {
-                gameDisplay.style.display = "block";
-            }, 1000);
-        })
-    </script>
+  
     <!-- jQuery -->
     <script src="Ryan%20-%20Personal%20Portfolio%20Template_files/jquery-3.2.1.min.js.download"></script>
     <script src="Ryan%20-%20Personal%20Portfolio%20Template_files/jquery-migrate-3.0.0.min.js.download"></script>
