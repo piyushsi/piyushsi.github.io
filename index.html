@@ -732,19 +732,19 @@
                 var Change = new Audio('../todo/assets/media/Change.mp3');
 
                 if (words.innerText.includes("project")) {
-                    window.location.replace("https://piyushsi.github.io/#projects");
+                    window.location.replace("/#projects");
                     Project.play();
                     words.textContent = ""
                 } else if (words.innerText.includes("contact")) {
-                    window.location.replace("https://piyushsi.github.io/#contact");
+                    window.location.replace("/#contact");
                     Contact.play();
                     words.textContent = ""
                 } else if (words.innerText.includes("about")) {
-                    window.location.replace("https://piyushsi.github.io/#aboutus");
+                    window.location.replace("/#aboutus");
                     Hello.play();
                     words.textContent = ""
                 } else if (words.innerText.includes("home")) {
-                    window.location.replace("https://piyushsi.github.io/#");
+                    window.location.replace("/#");
                     Home.play();
                     words.textContent = ""
                 } else if (words.innerText.includes("down")) {
@@ -790,8 +790,6 @@
                     words.textContent = ""
                 } else if (words.innerText.includes("function destroy")) {
                     Destroy.play()
-                    words.textContent = ""
-                    clearInterval();
                 }
             }
             window.setInterval(function() {
