@@ -44,6 +44,81 @@
     <link rel="stylesheet" href="./style-switcher/style-switcher.css" type="text/css">
     <script type="text/javascript" src="./style-switcher/jquery.cookie.js"></script>
 </head>
+    <!-- euc game -->
+<section id="gameuc">
+    <h2 class="props3" style="text-align: center; cursor: pointer;">X</h2>
+    <h1 class="props2" style="text-align: center; cursor: pointer;">F5</h1>
+    
+    <iframe class="if2" src="https://piyushsi.me/eucjump"></iframe>
+    <style>
+        .props2{
+            top:4rem;
+            position: relative;
+            z-index: 1000;
+        }
+        .props3{
+            top:2rem;
+            position: relative;
+            z-index: 1000;
+            font-size: 5rem;
+        }
+        .if2 {
+            position: relative;
+            left: 8%;
+            width: 100vw;
+            height: 100vh;
+            border: none;
+        }
+        #gameuc{
+            position: fixed;
+            margin-top: 2rem;;
+            background-color: transparent;
+            z-index: 999;
+            display: none;
+        }
+
+    </style>
+    <script>
+        var props2 = document.querySelector('.props2')
+        var props3 = document.querySelector('.props3')
+        var ifr2 = document.querySelector('.if2')
+        props2.addEventListener('click', e => {
+            console.log('piyush')
+            ifr2.src = "https://piyushsi.me/eucjump"
+            var euc = ifr2.contentWindow.document.querySelector('img')
+            window.setInterval(function() {   
+            euc.click();
+            }, 1000);
+        })
+        var gameuc = document.getElementById('gameuc')
+        props3.addEventListener('click', e => {
+            console.log('piyush')
+            gameuc.style.display="none"
+        })
+        
+        document.addEventListener('keyup', e=>{
+            if(e.keyCode==80){
+              function hack(){
+                document.addEventListener('keyup', e=>{
+            if(e.keyCode==76){
+                document.addEventListener('keyup', e=>{
+            if(e.keyCode==65){
+                document.addEventListener('keyup', e=>{
+            if(e.keyCode==89){
+                gameuc.style.display="block"
+            }
+        })
+            }
+        })
+            }
+        })
+              }
+              hack();
+            }
+        })
+    </script>
+</section>
+<!-- euc game end -->
 <!-- Google Search -->
 <form class="google_search" name="cse" id="searchbox_demo" action="https://www.google.com/search">
     <input name="q" type="text" size="40" class="inputSearch" />
