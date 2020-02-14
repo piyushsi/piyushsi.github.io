@@ -601,10 +601,10 @@
             </div>
             <!-- container -->
         </section>
-        <!-- / -->
+        <!-- projects/ -->
          <section id="projects" class="section p-0px-b" style="background-color: #E6E5EA;">
             <h1 class="props" style="text-align: center; cursor: pointer;">Projects</h1>
-            <iframe class="if" src="https://piyushsi.me/projects"></iframe>
+            <iframe scrolling="no" class="if" src="https://piyushsi.me/projects"></iframe>
             <style>
                 .if {
                     width: 100%;
@@ -621,6 +621,12 @@
                 })
             </script>
         </section>
+
+        <!-- /blog -->
+        <section id="blog" class="section p-0px-b" >
+            <iframe scrolling="no" class="if" src="https://medium-x.herokuapp.com/inpiyushsinha"></iframe>
+        </section>
+
 
         <!-- Contact Start -->
         <section id="contact" class="section p-0px-b contact-section">
@@ -824,6 +830,7 @@
                     words.textContent = ""
                 } else if (words.innerText.includes("down")) {
                     window.scrollBy(0, 200);
+                    
                     words.textContent = ""
                 } else if (words.innerText.includes("up")) {
                     window.scrollBy(0, -200);
@@ -869,15 +876,17 @@
             }
             window.setInterval(function() {
                 piyush();
-            }, 1000);
+            }, 2000);
 
             recognition.addEventListener('end', recognition.start);
 
             recognition.start();
         }
+        
         var Rec = document.getElementById('Rec')
         Rec.addEventListener('click', e => {
-            Rec.classList.add("Rec")
+            Rec.classList.add("Rec");
+            (e.keycode==40)
             speechRec();
         })
     </script>
