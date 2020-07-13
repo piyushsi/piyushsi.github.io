@@ -829,6 +829,10 @@
                     window.location.replace("/#");
                     Home.play();
                     words.textContent = ""
+                } else if (words.innerText.includes("download CV")) {
+                    var download = document.querySelector(".download_cv");
+                    download.click();
+                    words.textContent = "";
                 } else if (words.innerText.includes("down")) {
                     window.scrollBy(0, 200);
                     
@@ -854,10 +858,6 @@
                     var Gsearch = document.querySelector(".Gsearch")
                     inputSearch.value = TextSearch
                     Gsearch.click()
-                } else if (words.innerText.includes("download CV")) {
-                    var download = document.querySelector(".download_cv");
-                    download.click();
-                    words.textContent = "";
                 } else if (words.innerText.includes("ok let's do some Java function")) {
                     Ready.play()
                     words.textContent = ""
