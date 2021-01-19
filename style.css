@@ -28,86 +28,37 @@ header{
 .brand:hover{
   color: #fff;
 }
-a{text-decoration: none;}
-li{list-style: none;}
-nav.menu{
-  text-align: center;
-  width: 100%;
-  background: #e71d36;
-  height: 50px;
-  position: absolute;
-  top: -51px;
-  transition: all .3s ease;
-  z-index: -1;
-}
-nav ul{
-  line-height: 50px;
-}
-nav li{
-  display: inline-block;
-}
-nav a{padding: 15px 20px 14px; color: #fff; transition: background 0.4s ease, font-size: 0.6s ease; font-size: 18px;}
-nav a:hover, nav li.active a{
-  background: #cc0031;
-  color: #fff;
-}
-#menu-toggle{
-  display: none;
-}
-.menu-icon{
-  float: right;
-  /*padding: 10px 20px;*/
-  margin: 5px 20px 5px 0;
-  /*background: #000;*/
-  color: #afafaf;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 25px;
-  
-}
-#menu-toggle:checked ~ nav.menu{
-  position: absolute;
-  top: 51px;
-}
+
 .banner{
-  padding-top: 70px;
+  padding: 70px;
   text-transform: uppercase;
   color: #fff;
+  text-align:center;
 }
 .banner h1{
   border-top: 4px solid #fff;
   border-bottom: 4px solid #fff;
   display: inline-block;
   padding: 10px;
-}
-a{
-  margin-top: 20px;
-  text-transform: uppercase;
-  padding: 5px 20px;
-  font-size: 20px;
-}
-a.btn-success{
-  background: #ff9f1c;
-  border: 1px solid #ff9f1c;
-}
-.btn-primary{
-  background: #f25f5c;
-  border :1px solid #f25f5c;
-}
-.icon{
-  margin-top: 20px;
-}
-.icon a{
-  padding: 5px 10px;
-  font-size: 25px;
-  color: #fdfffc;
+  margin:10px
 }
 
-@media screen and (max-width: 480px) {
-  nav li{display: block;}
-  nav a{ display: block;}
-  nav.menu{
-    top: -300px;
-    height: auto;
-  }
+h4 {
+  margin-bottom:30px;
+}
+
+.btn-primary{
+  background: white;
+  border :1px solid #f25f5c;
+  text-decoration:none;
+  color:#17212c;
+  padding:10px;
+}
+.icon {
+  padding: 20px;
+}
+i {
+  color: white;
+  font-size:50px;
+  margin:10px;
 }
