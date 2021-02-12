@@ -1,64 +1,72 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
 
-*{margin:0; padding: 0;}
-body{
-  font-family: 'Open Sans', sans-serif;
-  background: #17212c;
-}
-.container{
-  width: 90%;
-  margin: 0 auto;
-}
-header{
-  width: 100%;
-  height: 50px;
-  /*border-bottom: 1px solid #ddd;*/
-  background: #17212f;
-  z-index: 99;
-}
-.brand{
-  line-height: 50px;
-  font-size: 30px ;
-  font-weight: bolder;
-  float: left;
-  color: #afafaf;
-  transition: color 2s ease;
-  cursor: pointer;
-}
-.brand:hover{
-  color: #fff;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.banner{
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #17212c;
+}
+
+.banner {
   padding: 70px;
   text-transform: uppercase;
   color: #fff;
-  text-align:center;
+  text-align: center;
 }
-.banner h1{
-  border-top: 4px solid #fff;
-  border-bottom: 4px solid #fff;
+
+.banner h1 {
+  border-top: 4px solid #afafaf;
+  border-bottom: 4px solid #afafaf;
   display: inline-block;
   padding: 10px;
-  margin:10px
+  margin: 10px;
+  color: #afafaf;
+  transition: color 2s ease;
+  transition: border 1s ease;
+  height: 2.5rem;
+  cursor: pointer;
+  overflow: hidden;
 }
 
-h4 {
-  margin-bottom:30px;
+.banner h1:hover {
+  border-top: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+  color: #fff;
 }
 
-.btn-primary{
+.banner img {
+  height: 15rem;
+  opacity: 0.5;
+  border-radius: 50px 0px;
+  transition: opacity 2s ease;
+}
+
+.banner img:hover {
+  opacity: 1;
+}
+
+h4 a {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.btn-primary {
   background: white;
-  border :1px solid #f25f5c;
-  text-decoration:none;
-  color:#17212c;
-  padding:10px;
+  border: 1px solid #f25f5c;
+  text-decoration: none;
+  color: #17212c;
+  padding: 10px;
 }
+
 .icon {
   padding: 20px;
 }
+
 i {
   color: white;
-  font-size:50px;
-  margin:10px;
+  font-size: 50px;
+  margin: 10px;
 }
